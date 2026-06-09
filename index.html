@@ -17,7 +17,6 @@
             --border-color: #dddddd;  
         }
 
-
         * {
             box-sizing: border-box;
             margin: 0;
@@ -25,11 +24,9 @@
             font-family: "Arial", "Microsoft JhengHei", sans-serif;
         }
 
-
         html {
             scroll-behavior: smooth;
         }
-
 
         body {
             color: var(--text-dark);
@@ -38,7 +35,6 @@
             position: relative;
             overflow-x: hidden;
         }
-
 
         /* ================= 頂部牛奶灌滿進度條 ================= */
         .scroll-progress-container {
@@ -58,7 +54,6 @@
             transition: width 0.1s ease-out;
         }
 
-
         /* ================= 導覽列與下拉選單 ================= */
         nav {
             position: fixed;
@@ -73,7 +68,6 @@
             z-index: 1000;
         }
 
-
         .logo {
             font-weight: 900;
             font-size: 1.3rem;
@@ -82,20 +76,17 @@
             color: var(--cow-black);
         }
 
-
         nav ul {
             display: flex;
             list-style: none;
             align-items: center;
         }
 
-
         nav ul li {
             margin-left: 30px;
             position: relative;
             padding: 10px 0;    
         }
-
 
         nav ul li a {
             text-decoration: none;
@@ -106,11 +97,9 @@
             cursor: pointer;
         }
 
-
         nav ul li a:hover {
             color: var(--strawberry-pink);
         }
-
 
         .dropdown-menu {
             display: none;            
@@ -128,12 +117,10 @@
             z-index: 1100;
         }
 
-
         .dropdown:hover .dropdown-menu {
             display: block;
             animation: fadeIn 0.2s ease-out;
         }
-
 
         .dropdown-menu li { margin-left: 0; padding: 0; }
         .dropdown-menu li a {
@@ -146,18 +133,15 @@
             white-space: nowrap;      
         }
 
-
         .dropdown-menu li a:hover {
             background-color: var(--strawberry-pink);
             color: var(--cow-black);
         }
 
-
         @keyframes fadeIn {
             from { opacity: 0; transform: translate(-50%, -5px); }
             to { opacity: 1; transform: translate(-50%, 0); }
         }
-
 
         /* ================= Hero 乳牛主視覺區塊 ================= */
         header {
@@ -181,7 +165,6 @@
             padding-top: 60px;
         }
 
-
         .header-box {
             background: rgba(253, 251, 247, 0.96);
             padding: 40px 60px;
@@ -190,19 +173,17 @@
             box-shadow: 0 10px 0 var(--cow-black);
         }
 
-
         header h1 { font-size: 3.5rem; letter-spacing: 5px; margin-bottom: 10px; color: var(--cow-black); }
         header h2 { font-size: 1.5rem; color: var(--text-muted); font-weight: bold; margin-bottom: 20px; }
         .tagline { max-width: 600px; color: var(--text-dark); font-size: 1.1rem; }
 
-
         /* ================= 內容區塊與卡片互動 ================= */
         .container { max-width: 1200px; margin: 0 auto; padding: 100px 20px; }
         .about-grid { display: grid; grid-template-columns: 1fr 2fr; gap: 50px; align-items: center; }
-       
+        
         .works-section { background-color: #ffffff; border-top: 3px dashed var(--cow-black); border-bottom: 3px dashed var(--cow-black); }
         .category-title { font-size: 1.6rem; font-weight: 900; margin: 60px 0 20px 0; color: var(--cow-black); border-left: 6px solid var(--milk-blue); padding-left: 15px; scroll-margin-top: 110px; }
-       
+        
         .project-card {
             background: var(--milk-white);
             border-radius: 12px;
@@ -216,22 +197,19 @@
             transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
         }
 
-
         .project-card:hover {
             transform: translateY(-5px) scale(1.01);
             box-shadow: 8px 8px 0 var(--cow-black);
             background-color: #ffffff;
         }
 
-
         .project-img { background-color: #eee; min-height: 300px; display: flex; align-items: center; justify-content: center; color: #777; border-right: 3px solid var(--cow-black); overflow: hidden; }
         .project-img img { width: 100%; height: 100%; object-fit: cover; display: block; }
-       
+        
         .project-content { padding: 40px; display: flex; flex-direction: column; justify-content: center; }
         .project-content h3 { font-size: 1.7rem; font-weight: 900; margin-bottom: 15px; color: var(--cow-black); }
         .project-tag { font-size: 0.85rem; font-weight: bold; letter-spacing: 1px; color: var(--text-muted); margin-bottom: 5px; }
         .project-desc { color: var(--text-dark); margin-bottom: 20px; font-size: 0.95rem; text-align: justify; }
-
 
         .more-btn-container { text-align: center; margin-bottom: 60px; }
         .view-more-btn {
@@ -239,13 +217,12 @@
         }
         .view-more-btn:hover { background-color: var(--strawberry-pink); transform: translate(-2px, -2px) rotate(1deg); box-shadow: 6px 6px 0 var(--cow-black); }
 
-
         /* ================= 彈出視窗 (Modal) 架構 ================= */
         .modal { display: none; position: fixed; z-index: 2000; left: 0; top: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.5); backdrop-filter: blur(5px); justify-content: center; align-items: center; }
         .modal-content { background-color: #fff; width: 90%; max-width: 950px; height: 85vh; border-radius: 16px; overflow: hidden; display: grid; grid-template-columns: 250px 1fr; position: relative; border: 3px solid var(--cow-black); box-shadow: 0 10px 30px rgba(0,0,0,0.2); }
         .modal-sidebar { background-color: var(--milk-white); border-right: 3px solid var(--cow-black); padding: 30px 20px; display: flex; flex-direction: column; gap: 15px; }
         .modal-sidebar h4 { font-size: 1.1rem; font-weight: 900; margin-bottom: 10px; color: var(--cow-black); }
-        .sub-item-link { padding: 12px 15px; border-radius: 8px; cursor: pointer; font-size: 0.95rem; font-weight: bold; transition: all 0.2s; background-color: #fff; border: 2px solid var(--cow-black); }
+        .sub-item-link { padding: 12px 15px; border-radius: 8px; cursor: pointer; font-size: 0.95rem; font-weight: bold; transition: all 0.2s; background-color: #fff; border: 2px solid var(--cow-black); text-align: left; }
         .sub-item-link:hover, .sub-item-link.active { background-color: var(--milk-blue); box-shadow: 3px 3px 0 var(--cow-black); }
         .modal-body { padding: 40px; overflow-y: auto; position: relative; }
         .close-btn { position: absolute; top: 20px; right: 25px; font-size: 2rem; cursor: pointer; color: #aaa; z-index: 100; }
@@ -253,50 +230,44 @@
         .detail-view { display: none; }
         .detail-view.active { display: block; }
 
-
         /* 輪播通用樣式 */
         .carousel-container { position: relative; width: 100%; height: 380px; background-color: #f7f7f7; border-radius: 8px; border: 2px solid var(--cow-black); margin-bottom: 25px; overflow: hidden; }
         .carousel-track { display: flex; width: 100%; height: 100%; transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94); }
         .carousel-slide { min-width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; background-size: contain; background-repeat: no-repeat; background-position: center; position: relative; background-color: #f7f7f7; overflow: hidden; }
         .carousel-slide img { max-width: 100%; max-height: 100%; object-fit: contain; display: block; margin: auto; }
         .carousel-slide iframe, .carousel-slide video { width: 100%; height: 100%; border: none; }
-       
+        
         .carousel-btn { position: absolute; top: 50%; transform: translateY(-50%); background-color: var(--milk-white); border: 2px solid var(--cow-black); color: var(--cow-black); width: 40px; height: 40px; border-radius: 50%; font-size: 1.2rem; font-weight: bold; cursor: pointer; display: flex; align-items: center; justify-content: center; z-index: 10; box-shadow: 2px 2px 0 var(--cow-black); transition: all 0.2s; user-select: none; }
         .carousel-btn:hover { background-color: var(--strawberry-pink); box-shadow: 3px 3px 0 var(--cow-black); }
         .carousel-btn.prev { left: 15px; }
         .carousel-btn.next { right: 15px; }
 
-
-        /* 💡 徹底移除所有圓點 */
+        /* 移除所有圓點 */
         .carousel-indicators { display: none !important; }
 
-
-        /* 💡 專屬優化：讓 UI/UX 視窗內部的直向截圖頂天立地的獨立樣式 */
+        /* UI/UX 視窗內部的直向截圖樣式 */
         .uiux-carousel {
-            height: 480px !important;    /* 調整高度，給手機直圖最舒適的伸展台 */
-            background-color: #ffffff !important; /* 改為與設計稿融合的純白底 */
+            height: 480px !important;    
+            background-color: #ffffff !important; 
             margin-bottom: 20px !important;
         }
         .uiux-carousel .carousel-slide img {
             width: auto !important;      
-            height: 100% !important;     /* 貼滿上下邊緣，左右留白不強行切圖 */
+            height: 100% !important;     
             max-width: 100% !important;
             object-fit: contain !important;
             margin: auto !important;
         }
 
-
-        /* 💡 專屬客製化：只讓橫幅長方形照片吃滿版 */
+        /* 專屬客製化：讓橫幅長方形照片吃滿版 */
         .img-cover-full {
             width: 100% !important;
             height: 100% !important;
             object-fit: cover !important;
         }
 
-
         .section-title { font-size: 2.2rem; font-weight: 900; margin-bottom: 30px; position: relative; display: inline-block; color: var(--cow-black); }
         .section-title::after { content: ''; position: absolute; bottom: -5px; left: 0; width: 100%; height: 8px; background-color: var(--strawberry-pink); z-index: -1; }
-
 
         /* ================= 聯絡資訊頁尾 ================= */
         footer { background-color: var(--cow-black); color: var(--milk-white); text-align: center; padding: 80px 20px; }
@@ -307,7 +278,6 @@
         footer a:hover { color: var(--milk-blue); border-bottom-color: var(--milk-blue); }
         .copyright { font-size: 0.85rem; color: #888; margin-top: 40px; }
 
-
         /* 點擊爆裂斑紋 */
         .cow-spot-particle { position: absolute; background-color: var(--cow-black); border-radius: 50%; pointer-events: none; animation: burstAndHide 0.6s cubic-bezier(0.1, 0.8, 0.3, 1) forwards; z-index: 9999; }
         @keyframes burstAndHide {
@@ -315,13 +285,13 @@
             100% { transform: translate(var(--mx), var(--my)) scale(1.2); opacity: 0; }
         }
 
-
+        /* 響應式網頁設計 (RWD) 防跑版 */
         @media (max-width: 768px) {
             nav { padding: 15px 20px; } nav ul { display: none; }
             .about-grid, .project-card, .modal-content { grid-template-columns: 1fr; }
             .project-img { border-right: none; border-bottom: 3px solid var(--cow-black); }
             .modal-content { height: 95vh; grid-template-rows: auto 1fr; }
-            .modal-sidebar { flex-direction: row; overflow-x: auto; padding: 15px; border-right: none; border-bottom: 3px solid var(--cow-black); }
+            .modal-sidebar { flex-direction: row; overflow-x: auto; padding: 15px; border-right: none; border-bottom: 3px solid var(--cow-black); -webkit-overflow-scrolling: touch; }
             .sub-item-link { white-space: nowrap; } header h1 { font-size: 2.5rem; } .header-box { padding: 20px; }
             .carousel-container { height: 280px; }
             .uiux-carousel { height: 380px !important; }
@@ -330,11 +300,9 @@
 </head>
 <body>
 
-
     <div class="scroll-progress-container">
         <div id="milk-bar"></div>
     </div>
-
 
     <nav id="navbar">
         <a href="#" class="logo">🐮 EMILY SHAN</a>
@@ -353,7 +321,6 @@
         </ul>
     </nav>
 
-
     <header>
         <div class="header-box">
             <h1>EMILY SHAN</h1>
@@ -362,13 +329,11 @@
         </div>
     </header>
 
-
     <section id="about" class="container">
         <div class="about-grid">
             <div class="about-img" style="position: relative; overflow: hidden; background-color: #eee; border: 3px solid var(--cow-black); border-radius: 15px; box-shadow: 6px 6px 0 var(--cow-black); width: 100%; aspect-ratio: 3/4; display: flex; align-items: center; justify-content: center; margin-right: 30px;">
                 <img src="我的照片.jpg" alt="Emily 的照片" style="width: 100%; height: 100%; object-fit: cover; display: block;">
             </div>
-
 
             <div>
                 <h2 class="section-title">ABOUT ME</h2>
@@ -395,14 +360,13 @@
         </div>
     </section>
 
-
     <section id="works" class="works-section">
         <div class="container" style="padding-top: 40px; padding-bottom: 20px;">
             <h2 class="section-title">SELECTED WORKS</h2>
 
-
+            <!-- ================= 1. 數位設計與體驗 ================= -->
             <div id="cat-digital" class="category-title">1. 數位設計與體驗 (Digital Design & UI/UX)</div>
-           
+            
             <div class="project-card" onclick="openModalWithTab('digital-modal', 'digital', 'd1')">
                 <div class="project-img">
                     <img src="./UIUX/Mobile App Screen Mockup, Mosaic.png" alt="陪伴雲封面">
@@ -413,7 +377,7 @@
                     <p class="project-desc">這是一套專為長者打造的照護系統。將生冷的健康數據轉化為具備動態反饋的「數位分身」，讓長輩能以直覺的視覺圖像掌握健康狀態，取代壓力沉重的診斷報告。</p>
                 </div>
             </div>
-           
+            
             <div class="project-card" onclick="openModalWithTab('digital-modal', 'digital', 'd2')">
                 <div class="project-img">
                     <img src="./電腦繪圖/龍.png" alt="向量創作封面">
@@ -424,13 +388,25 @@
                     <p class="project-desc">在純粹的黑白框架內練習微型圖樣，精準控制點、線、面的節奏排列。向量插畫創作則專注於人臉結構的數位描繪。</p>
                 </div>
             </div>
+
+            <div class="project-card" onclick="openModalWithTab('digital-modal', 'digital', 'd3')">
+                <div class="project-img">
+                    <img src="./VR導覽/VR封面.png" alt="VR導覽封面">
+                </div>
+                <div class="project-content">
+                    <div class="project-tag">虛擬實境 / 數位典藏</div>
+                    <h3>忠貞新村歷史場景 VR 導覽</h3>
+                    <p class="project-desc">榮獲桃園市政府「金質研究獎」肯定[cite: 3]。本專案以口述歷史結合 AI 協作[cite: 3]，數位重建已拆除的歷史建築（原聖德幼稚園）[cite: 1, 2]，透過 3D 空間漫遊與語音觸發物件[cite: 3]，重現消失的眷村時空溫度[cite: 2, 3]。</p>
+                </div>
+            </div>
+
             <div class="more-btn-container">
                 <button class="view-more-btn" onclick="openModalWithTab('digital-modal', 'digital', 'd1')">查看更多「數位設計」細項清單 ➔</button>
             </div>
 
-
+            <!-- ================= 2. 品牌與平面視覺 ================= -->
             <div id="cat-graphic" class="category-title">2. 品牌與平面視覺 (Branding & Graphic Design)</div>
-           
+            
             <div class="project-card" onclick="openModalWithTab('graphic-modal', 'graphic', 'g1')">
                 <div class="project-img">
                     <img src="./紙/紙_長方.png" alt="台灣字體實驗封面">
@@ -441,7 +417,7 @@
                     <p class="project-desc">設計從字體出發，刻意在筆畫邊緣留下帶點鋸齒的剪紙刀味。藉由模擬粗糙的紙漿紋理，傳達台灣那種粗獷、野性卻非常有生命力的質感。</p>
                 </div>
             </div>
-           
+            
             <div class="project-card" onclick="openModalWithTab('graphic-modal', 'graphic', 'g2')">
                 <div class="project-img">
                     <img src="./失戀陣線聯盟/設計概論.jpg" alt="失戀陣線聯盟封面">
@@ -452,13 +428,25 @@
                     <p class="project-desc">將90年代華語經典歌曲轉譯為視覺敘事，核心定調於歌詞中那種既憂鬱又老派的「等待感」。最核心的視覺巧思是將路燈頂端轉化為「紅色西瓜皮安全帽」。</p>
                 </div>
             </div>
+
+            <div class="project-card" onclick="openModalWithTab('graphic-modal', 'graphic', 'g3')">
+                <div class="project-img">
+                    <img src="./米干/有梗菜市場.png" alt="有梗菜市場封面">
+                </div>
+                <div class="project-content">
+                    <div class="project-tag">視覺行銷 / 社群迷因</div>
+                    <h3>有梗菜市場：米干誕生計畫</h3>
+                    <p class="project-desc">翻玩經典網路梗圖「上帝在創造 X 的時候加了什麼」，跳脫傳統美食推廣框架，以幽默的實驗室場景重新解構龍岡在地特色料理，縮短傳統文化與年輕世代的距離。</p>
+                </div>
+            </div>
+
             <div class="more-btn-container">
                 <button class="view-more-btn" onclick="openModalWithTab('graphic-modal', 'graphic', 'g1')">查看更多「平面視覺」細項清單 ➔</button>
             </div>
 
-
+            <!-- ================= 3. 動態影像與敘事 ================= -->
             <div id="cat-motion" class="category-title">3. 動態影像與敘事 (Motion Graphics & Storytelling)</div>
-           
+            
             <div class="project-card" onclick="openModalWithTab('motion-modal', 'motion', 'm1')">
                 <div class="project-img">
                     <img src="./敘事與故事/照服員介紹.png" alt="誰來照顧我封面" style="width: 100%; height: 100%; object-fit: cover; object-position: left center;">
@@ -469,7 +457,7 @@
                     <p class="project-desc">以日間照顧中心為背景，從護理師徐筱琳的第一人稱經驗出發，揭示台灣長照人力與制度困境。捕捉照護者與長者之間不易被看見的情感細節與真實連結。</p>
                 </div>
             </div>
-           
+            
             <div class="project-card" onclick="openModalWithTab('motion-modal', 'motion', 'm2')">
                 <div class="project-img">
                     <img src="./動畫概論/沸騰4.png" alt="溫水煮青蛙封面">
@@ -480,13 +468,25 @@
                     <p class="project-desc">講述一隻青蛙原本自在地游泳，卻游到撞到鍋壁，這時水漸漸變熱，它才意識到事情不對。最後以黑色幽默的反轉收尾，展現極具張力的手繪故事分鏡。</p>
                 </div>
             </div>
+
+            <div class="project-card" onclick="openModalWithTab('motion-modal', 'motion', 'm3')">
+                <div class="project-img">
+                    <img src="./互動式投影/界封面.png" alt="界封面">
+                </div>
+                <div class="project-content">
+                    <div class="project-tag">新媒體藝術 / 互動裝置設計</div>
+                    <h3>界 Threshold</h3>
+                    <p class="project-desc">以關係美學為核心，透過電腦鏡頭偵測手部數量。將個體的單手轉譯為冷色調線條，雙手則交織為溫暖色調。觀眾可透過肢體擺動撥動畫面，在純粹的幾何流動中探索人際邊界。</p>
+                </div>
+            </div>
+
             <div class="more-btn-container">
                 <button class="view-more-btn" onclick="openModalWithTab('motion-modal', 'motion', 'm1')">查看更多「動態影像」細項清單 ➔</button>
             </div>
         </div>
     </section>
 
-
+    <!-- ================= 彈出視窗 1：數位設計 ================= -->
     <div id="digital-modal" class="modal">
         <div class="modal-content">
             <span class="close-btn" onclick="closeModal('digital-modal')">&times;</span>
@@ -494,6 +494,7 @@
                 <h4>數位設計細項</h4>
                 <div class="sub-item-link active" id="btn-d1" onclick="switchTab('digital', 'd1')">使用者介面設計 UI/UX</div>
                 <div class="sub-item-link" id="btn-d2" onclick="switchTab('digital', 'd2')">電腦繪圖 (AI)</div>
+                <div class="sub-item-link" id="btn-d3" onclick="switchTab('digital', 'd3')">忠貞新村 VR 導覽</div>
             </div>
             <div class="modal-body">
                 <div id="d1" class="detail-view active">
@@ -512,7 +513,7 @@
                     </div>
                     <p>此細項展示完整的 CareNova 照護系統架構：包含長輩端的健康行為反饋介面、陪伴幣兌換商城，以及醫護管理端的高辨識度智慧分流看板。</p>
                 </div>
-               
+                
                 <div id="d2" class="detail-view">
                     <h2>電腦繪圖 (Adobe Illustrator)</h2>
                     <div class="carousel-container" id="carousel-d2">
@@ -525,11 +526,25 @@
                     </div>
                     <p>展示在純粹的黑白框架內，點、線、面的節奏排列與超過20組不規則微型構成練習；<br>以及透過層次色塊疊加將真實人像轉化為立體向量表現的熟練度。</p>
                 </div>
+
+                <div id="d3" class="detail-view">
+                    <h2>忠貞新村文化園區歷史場景 VR 導覽</h2>
+                    <div class="carousel-container" id="carousel-d3">
+                        <div class="carousel-btn prev" onclick="moveSlide('carousel-d3', -1)">❮</div>
+                        <div class="carousel-btn next" onclick="moveSlide('carousel-d3', 1)">❯</div>
+                        <div class="carousel-track">
+                            <div class="carousel-slide"><img src="./VR導覽/AI藍圖.jpg" alt="AI輔助生成藍圖"></div>
+                            <div class="carousel-slide"><img src="./VR導覽/3D重建.jpg" alt="Blender數位重建"></div>
+                            <div class="carousel-slide"><img src="./VR導覽/VR展示.jpg" alt="VR展示與互動體驗"></div>
+                        </div>
+                    </div>
+                    <p><strong>研究實作金質獎作品[cite: 3]：</strong>面對眷村文化流失，團隊深入社區深度訪談 10 位在地耆老[cite: 3]，將零散的記憶碎片結合生成式 AI 推估空間格局[cite: 2, 3]，建立具歷史真實性的 3D 建築藍圖[cite: 3]。最後導入 VR 平台設計第一人稱漫遊與物件觸發音訊互動[cite: 2, 3]，開發出能作為文化展示、歷史教材與數位典藏的方法論[cite: 3]。</p>
+                </div>
             </div>
         </div>
     </div>
 
-
+    <!-- ================= 彈出視窗 2：平面視覺 ================= -->
     <div id="graphic-modal" class="modal">
         <div class="modal-content">
             <span class="close-btn" onclick="closeModal('graphic-modal')">&times;</span>
@@ -537,6 +552,7 @@
                 <h4>品牌平面細項</h4>
                 <div class="sub-item-link active" id="btn-g1" onclick="switchTab('graphic', 'g1')">平面設計專案延伸</div>
                 <div class="sub-item-link" id="btn-g2" onclick="switchTab('graphic', 'g2')">設計概論作品</div>
+                <div class="sub-item-link" id="btn-g3" onclick="switchTab('graphic', 'g3')">米干誕生計畫 (企劃)</div>
             </div>
             <div class="modal-body">
                 <div id="g1" class="detail-view active">
@@ -552,7 +568,7 @@
                     </div>
                     <p>從刻意留下帶有像剪紙一樣、帶點鋸齒刀味的字體設計出發，將文字融入粗糙紙漿與造紙材質的視覺實驗，呈現台灣特有的野性與生命力。<br>（本系列均投稿至俄羅斯金蜂雙年展）</p>
                 </div>
-               
+                
                 <div id="g2" class="detail-view">
                     <h2>設計概論 - 視覺轉譯系列</h2>
                     <div class="carousel-container" id="carousel-g2">
@@ -565,11 +581,24 @@
                     </div>
                     <p>將90年代華語經典歌曲《失戀陣線聯盟》轉譯為視覺敘事，畫面透過復古速克達、電話亭與懸掛高處的安全帽符號，詮釋歌詞中純粹卻無奈的孤獨氛圍。</p>
                 </div>
+
+                <div id="g3" class="detail-view">
+                    <h2>影片行銷：米干誕生計畫 - 創意企劃與田調</h2>
+                    <div class="carousel-container" id="carousel-g3">
+                        <div class="carousel-btn prev" onclick="moveSlide('carousel-g3', -1)">❮</div>
+                        <div class="carousel-btn next" onclick="moveSlide('carousel-g3', 1)">❯</div>
+                        <div class="carousel-track">
+                            <div class="carousel-slide"><img src="./米干/企劃腳本.jpg" alt="社群行銷迷因企劃"></div>
+                            <div class="carousel-slide"><img src="./米干/食材解構.jpg" alt="實驗室視覺解構"></div>
+                        </div>
+                    </div>
+                    <p>此為影片行銷課程專案，我負責**核心創意企劃、內容開發與外聯場務**。為了縮短年輕世代對傳統文化的距離感，本片翻玩流行網路梗圖「上帝在創造時加了什麼」作為敘事核心。我們將台灣在來米的紮實、雲南滇緬的流浪記憶、與龍岡特有的在地熱情，包裝成實驗室中的調配「配方」，用幽默且極具質感的視覺調性推廣在地特色文化。</p>
+                </div>
             </div>
         </div>
     </div>
 
-
+    <!-- ================= 彈出視窗 3：動態影像 ================= -->
     <div id="motion-modal" class="modal">
         <div class="modal-content">
             <span class="close-btn" onclick="closeModal('motion-modal')">&times;</span>
@@ -577,6 +606,7 @@
                 <h4>動態影像細項</h4>
                 <div class="sub-item-link active" id="btn-m1" onclick="switchTab('motion', 'm1')">敘事與故事 (紀錄片)</div>
                 <div class="sub-item-link" id="btn-m2" onclick="switchTab('motion', 'm2')">動畫概論作品</div>
+                <div class="sub-item-link" id="btn-m3" onclick="switchTab('motion', 'm3')">界 Threshold (新媒體)</div>
             </div>
             <div class="modal-body">
                 <div id="m1" class="detail-view active">
@@ -598,7 +628,7 @@
                     </div>
                     <p>這部紀錄短片聚焦於護理師的第一人稱經驗，透過深入機構田野調查與影像剪輯，捕捉照護者與長者之間不易被看見的情感細節與真實連結。<br>（榮獲台新銀行「您的一票，決定愛的力量」公益傳播獎肯定）</p>
                 </div>
-               
+                
                 <div id="m2" class="detail-view">
                     <h2>動畫概論 - 溫水煮青蛙故事動畫</h2>
                     <div class="carousel-container" id="carousel-m2">
@@ -618,10 +648,25 @@
                     </div>
                     <p>展示具張力的2D手繪動態故事分鏡：講述一隻自在游泳的青蛙，撞到鍋壁後水漸漸變熱，慢慢地用舌頭頂開鍋蓋逃生卻被一巴掌打昏、做成青蛙湯的黑色幽默故事。</p>
                 </div>
+
+                <div id="m3" class="detail-view">
+                    <h2>互動式投影設計 - 《界 Threshold》</h2>
+                    <div class="carousel-container" id="carousel-m3">
+                        <div class="carousel-btn prev" onclick="moveSlide('carousel-m3', -1)">❮</div>
+                        <div class="carousel-btn next" onclick="moveSlide('carousel-m3', 1)">❯</div>
+                        <div class="carousel-track">
+                            <div class="carousel-slide">
+                                <iframe width="100%" height="100%" src="https://www.youtube.com/embed/這裡更換為你界的YouTube影片代碼" title="界 互動投影" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen style="border: none;"></iframe>
+                            </div>
+                            <div class="carousel-slide"><img src="./互動式投影/手部偵測.jpg" alt="單手冷色調幾何線條"></div>
+                            <div class="carousel-slide"><img src="./互動式投影/線條晃動.jpg" alt="雙手暖色調扭曲"></div>
+                        </div>
+                    </div>
+                    <p>作品《界》旨在透過科技探討人際關係的冷暖與空間邊界，我在此專案中主導**技術實作與互動邏輯開發**。系統透過電腦鏡頭偵測場域中的手部數量：以單手代表獨立個體，畫面呈現寂靜的冷色調幾何線條；當偵測到雙手同時出現，畫面則會轉化為暖色調。觀眾可透過手部晃動即時撥動並扭曲投影線條，將抽象的「關係美學」轉譯為直覺流暢的視覺互動。</p>
+                </div>
             </div>
         </div>
     </div>
-
 
     <section id="contact">
         <footer>
@@ -635,10 +680,8 @@
         </footer>
     </section>
 
-
     <script>
         let carouselIndices = {};
-
 
         function initCarousels() {
             const containers = document.querySelectorAll('.carousel-container');
@@ -646,25 +689,23 @@
                 const id = container.id;
                 carouselIndices[id] = 0;
                 const track = container.querySelector('.carousel-track');
-                track.style.transform = `translateX(0%)`;
+                if (track) track.style.transform = `translateX(0%)`;
             });
         }
-
 
         function moveSlide(carouselId, direction) {
             const container = document.getElementById(carouselId);
             const track = container.querySelector('.carousel-track');
             const slides = track.querySelectorAll('.carousel-slide');
             const maxIndex = slides.length - 1;
-           
+            
             let currentIndex = (carouselIndices[carouselId] || 0) + direction;
             if (currentIndex > maxIndex) currentIndex = 0;
             if (currentIndex < 0) currentIndex = maxIndex;
-           
+            
             carouselIndices[carouselId] = currentIndex;
             track.style.transform = `translateX(-${currentIndex * 100}%)`;
         }
-
 
         function openModalWithTab(modalId, category, targetViewId) {
             document.getElementById(modalId).style.display = 'flex';
@@ -673,45 +714,38 @@
             setTimeout(initCarousels, 50);
         }
 
-
         function closeModal(modalId) {
             document.getElementById(modalId).style.display = 'none';
             document.body.style.overflow = 'auto';
         }
 
-
         function switchTab(category, viewId) {
             const modal = document.querySelector(`#${category}-modal`);
             modal.querySelectorAll('.detail-view').forEach(v => v.classList.remove('active'));
             modal.querySelectorAll('.sub-item-link').forEach(link => link.classList.remove('active'));
-           
+            
             document.getElementById(viewId).classList.add('active');
             document.getElementById(`btn-${viewId}`).classList.add('active');
             initCarousels();
         }
 
-
         window.onclick = function(event) {
             if (event.target.classList.contains('modal')) closeModal(event.target.id);
         }
-
 
         window.onscroll = function() {
             let winScroll = document.body.scrollTop || document.documentElement.scrollTop;
             let height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
             let scrolled = (winScroll / height) * 100;
-            document.getElementById("milk-bar").style.width = scrolled + "%";
+            const milkBar = document.getElementById("milk-bar");
+            if (milkBar) milkBar.style.width = scrolled + "%";
         };
-
 
         window.onload = initCarousels;
 
-
         // 點擊爆裂斑紋特效
         document.addEventListener('click', function(e) {
-            // 這個 if 條件確保了特效不會影響到原本的按鈕和連結點擊
             if (e.target.tagName === 'BUTTON' || e.target.tagName === 'A' || e.target.classList.contains('sub-item-link') || e.target.classList.contains('carousel-btn') || e.target.classList.contains('close-btn') || e.target.closest('.project-card')) return;
-
 
             const particleCount = 5;
             for (let i = 0; i < particleCount; i++) {
@@ -719,12 +753,10 @@
             }
         });
 
-
         function createSpotParticle(x, y) {
             const particle = document.createElement('div');
             particle.classList.add('cow-spot-particle');
             document.body.appendChild(particle);
-
 
             const size = Math.random() * 30 + 15;
             particle.style.width = size + 'px';
@@ -733,20 +765,16 @@
             particle.style.left = x + 'px';
             particle.style.top = y + 'px';
 
-
             const angle = Math.random() * Math.PI * 2;
             const distance = Math.random() * 60 + 30;
             const mx = Math.cos(angle) * distance + 'px';
             const my = Math.sin(angle) * distance + 'px';
 
-
             particle.style.setProperty('--mx', mx);
             particle.style.setProperty('--my', my);
-
 
             setTimeout(() => { particle.remove(); }, 600);
         }
     </script>
 </body>
 </html>
-
